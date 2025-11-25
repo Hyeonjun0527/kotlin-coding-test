@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Property Basic</title>
+    <style>
+      .css_test {
+        background-image: url("img6.jpg");
+        background-position: 0% 0%;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        border: 1px solid black;
+        display: inline-block;
+        font-weight: bold;
+        height: 400px;
+        line-height: 150px !important;
+        overflow: auto;
+        text-align: center;
+        width: 30%;
+      }
+
+      .css_test span {
+        background: #fff;
+        border-radius: 5px;
+        padding: 15px;
+      }
+
+      h1 {
+        padding-top: 100px;
+        padding-bottom: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>각각의 스크롤바를 움직여 보세요. 그리고 화면도 스크롤해 보세요.</h1>
+    <center>
+      <div class="css_test" style="background-attachment:scroll;">
+        <span>scroll</span><br>
+        <span>웹 프로그래밍</span><br>
+        <span>scroll</span><br>
+        <span>웹 프로그래밍</span><br>
+        <span>scroll</span><br>
+      </div>
+      <div class="css_test" style="background-attachment:fixed;">
+        <span>fixed</span><br>
+        <span>웹 프로그래밍</span><br>
+        <span>fixed</span><br>
+        <span>웹 프로그래밍</span><br>
+        <span>fixed</span><br>
+      </div>
+      <div class="css_test" style="background-attachment:local;">
+        <span>local</span><br>
+        <span>웹 프로그래밍</span><br>
+        <span>local</span><br>
+        <span>웹 프로그래밍</span><br>
+        <span>local</span><br>
+      </div>
+    </center>
+  </body>
+</html>

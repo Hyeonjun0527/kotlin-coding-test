@@ -34,17 +34,17 @@ fun main() {
     }
 }
 
-//a.last, a.subList, max,
-
-fun main() {
-    fun readInt() = readln().toInt()
-    repeat(readInt()) {
-        val n = readInt()
-        val a = readln().split(' ').map { it.toInt() }
-        if (a.last() == a.subList(0, n- 1).max() + 1) {
-            println(a.last() - 1)
-        }else {
-            println("Ambiguous")
-        }
-    }
-}
+////a.last, a.subList, max,
+//
+//fun main() {
+//    fun readInt() = readln().toInt()
+//    repeat(readInt()) {
+//        val n = readInt()
+//        val a = readln().split(' ').map { it.toInt() }
+//        if (a.last() == a.subList(0, n- 1).max() + 1) {
+//            println(a.last() - 1)
+//        }else {
+//            println("Ambiguous")
+//        }
+//    }
+//}
