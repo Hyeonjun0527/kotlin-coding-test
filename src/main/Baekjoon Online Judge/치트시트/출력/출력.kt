@@ -1,6 +1,6 @@
 @file:Suppress("unused")
 
-package 치트시트
+package 치트시트.출력
 
 /**
  * 코틀린 입력 파싱 + Pair/Triple/data class + buildString 예제 모음
@@ -25,6 +25,7 @@ fun main() {
 
     run {
         val line = "3 5"
+        println(line)
         val (a, b) = line.split(" ").let {
             it[0].toInt() to it[1].toInt()
         }

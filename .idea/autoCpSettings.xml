@@ -4,7 +4,7 @@
     <option name="defaultFileExtension" value="kt" />
     <option name="fileGenerationRoot">
       <map>
-        <entry key="Baekjoon Online Judge" value="src/main/$groupName/11-18" />
+        <entry key="Baekjoon Online Judge" value="src/main/$groupName/11-30" />
         <entry key="Codeforces" value="src/main/kotlin/$groupName" />
       </map>
     </option>
