@@ -1,6 +1,10 @@
 /*
 
 다익스트라
+목적
+초기에서 모든곳까지의 최단거리 어케구하지?
+
+방법
 1) 지금까지 발견한 곳 중에서 제일 가까운 곳부터 먼저 가고 최단거리 확정한다.(최단거리 확정 : visited[cur]=true 다신 안들르기로 한거니 확정한거.)
 2) 거기서 더 싸게 갈 수 있는 새로운 곳들을 살짝 더 계산해본다.
 3) 이걸 계속 반복하면 초기 위치에서 모든 곳까지의 최단 거리가 구해진다.
@@ -45,6 +49,7 @@ fun main() {
     val adj = List(v + 1) { mutableListOf<Edge>() }
 
     dist[s] = 0
+    //visited는 이미 초기화 완료
     pq.add(Edge(s, 0))
 
     repeat(e) {
@@ -65,12 +70,12 @@ fun main() {
             }
         }
     }
-
+1
     val sb =StringBuilder()
 
-    for (d in dist) {
+    dist.drop(1).forEach { d ->
         if (d == Int.MAX_VALUE) sb.append("INF\n")
-        else sb.append("${d}\n")
+        else sb.append("$d\n")
     }
 
 //    for (i in 1 until v + 1) {
