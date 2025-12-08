@@ -7,8 +7,10 @@ fun main() {
         var isGroup = true // 결과 플래그
 
         for (c in word) {
-            // 핵심 로직: 문자가 바뀌었는데(c != prev), 이미 방문한 적 있다면(c in visited)?
-            if (c != prev && c in visited) {
+            // 핵심 로직: 문자가 바뀌었는데(c != prev), 이미 방문한 적 있다면(c in visited)
+            val 문자바뀜 = c != prev
+            val 나왔던문자임 = c in visited
+            if (문자바뀜 && 나왔던문자임) {
                 isGroup = false
                 break // 더 볼 필요 없으니 탈출!
             }
