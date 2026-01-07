@@ -2,15 +2,15 @@
 fun main() {
     val (n, m, s) = readln().split(" ").map { it.toInt() }
 
-    val graph = MutableList(n+1) { mutableListOf<Int>() }
+    val adjList = MutableList(n+1) { mutableListOf<Int>() }
 
     repeat(m) {
         val (a,b) = readln().split(" ").map { it.toInt() }
-        graph[a].add(b)
-        graph[b].add(a)
+        adjList[a].add(b)
+        adjList[b].add(a)
     }
 
-    for (i in 1..n) graph[i].sort()
+    for (i in 1..n) adjList[i].sort()
 
     val visitedDfs = BooleanArray(n + 1)
     val dfsOut = StringBuilder()
@@ -18,7 +18,7 @@ fun main() {
     fun dfs(v: Int) {
         visitedDfs[v] = true
         dfsOut.append("${v} ")
-        graph[v].forEach {
+        adjList[v].forEach {
             if (visitedDfs[it]) return@forEach
             dfs(it)
         }
@@ -37,7 +37,7 @@ fun main() {
     while (q.isNotEmpty()) {
         val cur = q.removeFirst()
         bfsOut.append("${cur} ")
-        graph[cur].forEach {
+        adjList[cur].forEach {
             if (visitedBfs[it]) return@forEach
             visitedBfs[it] = true
             q.addLast(it)
