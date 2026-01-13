@@ -1,4 +1,5 @@
 
+//연결리스트 방식 노드 에지 시작
 fun main() {
     val (n, m, s) = readln().split(" ").map { it.toInt() }
 
@@ -29,7 +30,7 @@ fun main() {
 
     dfs(s)
     if (dfsOut.isNotEmpty()) dfsOut.setLength(dfsOut.length - 1) // 마지막 공백 제거
-    println(dfsOut.toString())
+    println(dfsOut)
 
     // 2) BFS (큐) bfs는 이웃노드를 싹다 순차적으로 탐색할거라고 약속하니까 레벨순서
     val visitedBfs = BooleanArray(n + 1)
@@ -43,7 +44,7 @@ fun main() {
         val cur = q.removeFirst()
         bfsOut.append("${cur} ")
         graph[cur].forEach {
-            if (visitedBfs[it] return@forEach
+            if (visitedBfs[it]) return@forEach
             visitedBfs[it] = true
             q.addLast(it)
         }
