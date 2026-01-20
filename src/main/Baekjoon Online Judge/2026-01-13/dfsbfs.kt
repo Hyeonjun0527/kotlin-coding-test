@@ -26,7 +26,10 @@ fun main() {
     val visitedBfs = BooleanArray(n + 1)
     val bfsOut = StringBuilder()
     val q = ArrayDeque<Int>()
+    val prev = IntArray(n + 1) { -1 }
+
     visitedBfs[s] = true
+    prev[s] = s              // 시작점은 자기 자신을 가리키게 처리
     q.addLast(s)
     while(q.isNotEmpty()) {
         val cur = q.removeFirst()
@@ -34,6 +37,7 @@ fun main() {
         graph[cur].forEach {
             if (visitedBfs[it]) return@forEach
             visitedBfs[it] = true
+            prev[it] = cur
             q.addLast(it)
         }
     }
