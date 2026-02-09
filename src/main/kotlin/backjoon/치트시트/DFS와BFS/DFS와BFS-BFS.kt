@@ -1,4 +1,4 @@
-//BFS – BOJ 1260 DFS와 BFS (가장 대표 기초)
+package backjoon.치트시트.DFS와BFS//BFS – BOJ 1260 DFS와 BFS (가장 대표 기초)
 
 fun main() {
     val (n, m, s) = readln().split(" ").map { it.toInt() }

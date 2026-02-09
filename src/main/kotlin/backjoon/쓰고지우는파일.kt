@@ -1,3 +1,5 @@
+package backjoon
+
 fun main() {
     fun bfs(start: Int, adj: List<List<Int>>, visited: BooleanArray) {
         val dq = ArrayDeque<Int>()

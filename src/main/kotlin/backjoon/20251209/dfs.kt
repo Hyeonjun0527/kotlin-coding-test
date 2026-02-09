@@ -1,31 +1,27 @@
 package 코테.`12-9`
+
 fun main() {
-
-    fun dfs(v: Int,
-            adj: List<List<Int>>,
-            visited: BooleanArray) {
-        if (visited[v]) return
-        visited[v] = true
-        print("$v ")
-        adj[v].forEach { nv ->
-            dfs(nv, adj, visited)
-        }
-    }
-
     val (v, e, s) = readln().split(" ").map { it.toInt() }
 
     val adj = List(v + 1) { mutableListOf<Int>() }.apply {
-        List(e) {
-            readln().split(" ").map { it.toInt() }
-        }.forEach { (a, b) ->
+        repeat(e) {
+            val (a, b) = readln().split(" ").map { it.toInt() }
             this[a].add(b)
             this[b].add(a)
         }
     }
 
-    val sortedAdj = adj.map { it.sorted() }
-
+    val sortedAdj: List<List<Int>> = adj.map { it.sorted() }
     val visited = BooleanArray(v + 1)
 
-    dfs(s, sortedAdj, visited)
+    fun dfs(cur: Int) {
+        if (visited[cur]) return
+        visited[cur] = true
+        print("$cur ")
+        for (nv in sortedAdj[cur]) {
+            dfs(nv)
+        }
+    }
+
+    dfs(s)
 }

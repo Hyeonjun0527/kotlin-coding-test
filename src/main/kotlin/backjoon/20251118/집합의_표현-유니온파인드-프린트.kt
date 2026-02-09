@@ -91,7 +91,7 @@ fun main() {
 //    return ra == rb
 //}
 //
-//fun main() {
+//fun backjoon.main() {
 //    val (n, m) = readln().trim().split(' ').map { it.toInt() }   // n: 노드 수, m: 연산 수
 //
 //    mom = IntArray(n + 1) { it }         // 처음에는 모든 원소가 자기 자신을 부모로 가짐 (각자 독립 집합)

@@ -1,4 +1,4 @@
-//  채플이 너무해
+package backjoon.`20251230`//  채플이 너무해
 
 fun main(args: Array<String>) {
     val n = readln().toInt()

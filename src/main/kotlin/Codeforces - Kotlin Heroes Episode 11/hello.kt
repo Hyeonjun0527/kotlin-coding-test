@@ -1,13 +1,11 @@
-// 2025.11.06 at 15:38:06 GMT
+package `Codeforces - Kotlin Heroes Episode 11`// 2025.11.06 at 15:38:06 GMT
 import java.io.*
 import kotlin.system.measureTimeMillis
 import java.util.TreeMap
 import java.util.TreeSet
-import kotlin.collections.get
 import kotlin.math.*
 import kotlin.random.Random
 import kotlin.random.nextInt
-import kotlin.text.get
 
 //All typealias that I use
 typealias pii = Pair<Int,Int>

@@ -1,4 +1,4 @@
-
+package backjoon.치트시트.DFS와BFS
 fun main() {
     val (n, m, s) = readln().split(" ").map { it.toInt() }
 

@@ -1,3 +1,5 @@
+package backjoon.`20260202`
+
 fun main() {
     val (세로, 가로) = readln().split(" ").map { it.toInt() }
 

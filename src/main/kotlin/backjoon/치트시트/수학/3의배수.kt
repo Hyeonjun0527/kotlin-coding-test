@@ -1,4 +1,4 @@
-package backjoon.`20260207`//  3의 배수
+package backjoon.치트시트.수학//  3의 배수
 
 fun main(args: Array<String>) {
     val n = readln().toInt()

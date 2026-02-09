@@ -1,2 +1,2 @@
-package `2026-01-13`
+package backjoon.`20260113`
 

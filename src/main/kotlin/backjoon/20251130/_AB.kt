@@ -21,7 +21,7 @@ fun main() {
 * 스트링 토크나이저, 버퍼드라이터는 import가 필요함.
 * java.util.StringTokenizer
 * */
-//fun main() {
+//fun backjoon.main() {
 //    readln()
 //    val bw = BufferedWriter(OutputStreamWriter(System.out))
 //    while(true) {

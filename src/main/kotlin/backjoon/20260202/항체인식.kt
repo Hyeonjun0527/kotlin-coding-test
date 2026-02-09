@@ -1,3 +1,5 @@
+package backjoon.`20260202`
+
 import java.util.ArrayDeque
 
 fun main() {
@@ -13,14 +15,13 @@ fun main() {
     // 1) 값이 바뀐 칸 하나 찾기
     var 시작행 = -1
     var 시작열 = -1
-    run {
-        for (r in 0 until 세로) {
-            for (c in 0 until 가로) {
-                if (전[r][c] != 후[r][c]) {
-                    시작행 = r
-                    시작열 = c
-                    return@run
-                }
+
+    outer@ for (r in 0 until 세로) {
+        for (c in 0 until 가로) {
+            if (전[r][c] != 후[r][c]) {
+                시작행 = r
+                시작열 = c
+                break@outer
             }
         }
     }

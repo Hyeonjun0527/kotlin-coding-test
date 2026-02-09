@@ -1,4 +1,4 @@
-package backjoon.치트시트.정렬
+package backjoon.치트시트.dataStructure
 
 fun main() {
     val 카드개수 = readln().toInt()

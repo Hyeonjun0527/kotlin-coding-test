@@ -2,9 +2,11 @@ import kotlin.math.abs
 
 //BOJ_15686_Chicken
 
-data class Pos(val y: Int, val x: Int)
 
 fun main() {
+
+    data class Pos(val y: Int, val x: Int)
+
     val (n, m) = readln().split(" ").map { it.toInt() }
 
     val city = List(n) { readln().split(" ").map { it.toInt() } }

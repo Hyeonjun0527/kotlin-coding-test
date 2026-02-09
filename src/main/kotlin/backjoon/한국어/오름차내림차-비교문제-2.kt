@@ -1,8 +1,4 @@
-import 한국어.그다음_내림차순
-import 한국어.그다음_오름차순
-import 한국어.내림차순
-import 한국어.정렬하기
-import 한국어.하나씩_실행
+package backjoon.한국어
 
 data class 학생(
     val name: String,

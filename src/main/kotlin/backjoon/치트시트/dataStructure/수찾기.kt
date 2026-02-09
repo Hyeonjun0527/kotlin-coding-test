@@ -1,4 +1,4 @@
-package backjoon.치트시트.정렬 // 수 찾기
+package backjoon.치트시트.dataStructure // 수 찾기
 
 fun main() {
     val n = readln().toInt()

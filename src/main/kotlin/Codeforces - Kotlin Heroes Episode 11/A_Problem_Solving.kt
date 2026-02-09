@@ -1,5 +1,5 @@
 
-//fun 11-15.main(args: Array<String>) {
+//fun 11-15.backjoon.main(args: Array<String>) {
 //    val t = readln().toInt()
 //    repeat(t) {
 //        val n = readln().toInt()
@@ -36,7 +36,7 @@ fun main() {
 
 ////a.last, a.subList, max,
 //
-//fun main() {
+//fun backjoon.main() {
 //    fun readInt() = readln().toInt()
 //    repeat(readInt()) {
 //        val n = readInt()

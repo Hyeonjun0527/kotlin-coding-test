@@ -1,17 +1,15 @@
-import 한국어.그다음_내림차순
-import 한국어.그다음_오름차순
-import 한국어.내림차순
-import 한국어.정렬하기
-import 한국어.하나씩_실행
+package backjoon.`20251125`
 
-data class Student(
-    val name: String,
-    val k: Int,
-    val e: Int,
-    val m: Int
-)
+import backjoon.한국어.하나씩_실행
+
 
 fun main() {
+    data class Student(
+        val name: String,
+        val k: Int,
+        val e: Int,
+        val m: Int
+    )
     val students = listOf(
         Student("홍", 90, 70, 80),
         Student("김", 90, 80, 70),

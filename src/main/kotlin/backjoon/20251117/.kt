@@ -1,4 +1,4 @@
-
+package backjoon.`20251117`
 fun main(args: Array<String>) {
     var a = readln()
     var cnt = 0

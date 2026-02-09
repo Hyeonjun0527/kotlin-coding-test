@@ -1,4 +1,4 @@
-package backjoon.치트시트.다익스트라
+package backjoon.치트시트.그래프.다익스트라
 import java.util.PriorityQueue
 
 fun main() {

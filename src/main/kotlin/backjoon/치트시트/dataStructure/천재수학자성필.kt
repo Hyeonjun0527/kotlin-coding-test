@@ -1,4 +1,4 @@
-package backjoon.`20260205`
+package backjoon.치트시트.dataStructure
 
 
 
@@ -26,7 +26,6 @@ fun main(args: Array<String>) {
             dq.addLast(d)
         }
     }
-
     print(dq.removeLast())
 }
 

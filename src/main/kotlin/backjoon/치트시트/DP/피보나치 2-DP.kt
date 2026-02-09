@@ -1,3 +1,5 @@
+package backjoon.치트시트.DP
+
 fun main() {
     val n = readln().toInt()
 

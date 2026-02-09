@@ -1,9 +1,4 @@
-import 한국어.긴_숫자로
-import 한국어.누적하기
-import 한국어.변환하기
-import 한국어.자르기
-import 한국어.한줄_읽기
-import 한국어.한줄_출력
+package backjoon.한국어
 
 fun main(args: Array<String>) {
     // 1. 여기서 자르기를 호출하려면

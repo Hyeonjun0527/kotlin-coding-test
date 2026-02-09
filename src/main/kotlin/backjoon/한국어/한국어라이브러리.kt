@@ -1,4 +1,4 @@
-package 한국어
+package backjoon.한국어
 
 import java.util.ArrayDeque
 import java.util.Comparator
@@ -149,7 +149,7 @@ fun 이차원_체크배열_생성(행: Int, 열: Int): Array<BooleanArray> = Arr
 
 // 3. [범용] 2차원 배열 (모든 타입 가능) - 초기값을 넣어줘야 함
 // 예: 이차원_가변배열_생성(5, 5, "빈칸") -> 5x5 String 배열 생성
-fun <T> 이차원_가변배열_생성(행: Int, 열: Int, 초기값: T): Array<Array<T>> = Array(행) { Array(열) { 초기값 } }
+//fun <T> 이차원_가변배열_생성(행: Int, 열: Int, 초기값: T): Array<Array<T>> = Array(행) { Array(열) { 초기값 } }
 
 // 가변리스트 생성 (ArrayList)
 fun <T> 가변리스트_생성(): MutableList<T> = mutableListOf()

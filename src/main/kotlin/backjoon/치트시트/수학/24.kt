@@ -1,4 +1,4 @@
-package backjoon.`20260207`//  24
+package backjoon.치트시트.수학//  24
 
 fun main(args: Array<String>) {
     val (a,b,c) = readln().split(":").map { it.toInt() }

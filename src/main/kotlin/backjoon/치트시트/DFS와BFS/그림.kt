@@ -1,4 +1,4 @@
-package backjoon.`20260205`//  그림
+package backjoon.치트시트.DFS와BFS//  그림
 
 fun main(args: Array<String>) {
     val (n, m) = readln().split(" ").map { it.toInt() }

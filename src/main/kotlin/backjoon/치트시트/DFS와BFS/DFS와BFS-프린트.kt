@@ -54,7 +54,7 @@ private fun bfs(start: Int) {
     println("최종 visited: ${visited.contentToString()}")
 }
 
-// main: 입력 + 그래프 구성
+// backjoon.main: 입력 + 그래프 구성
 fun main() {
     val (n, m, s) = readln().split(" ").map { it.toInt() }
 

@@ -1,3 +1,5 @@
+package backjoon.`20251115`
+
 fun main(args: Array<String>) {
     val (n,a,b) = readln().split(" ").map { it.toInt() }
 

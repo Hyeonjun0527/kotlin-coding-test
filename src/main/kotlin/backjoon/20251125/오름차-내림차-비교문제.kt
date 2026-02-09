@@ -1,9 +1,9 @@
-
+package backjoon.`20251125`
 fun main() {
     // 문자열 배열 입력 또는 하드코딩
     val arr = listOf("apple", "cat", "banana", "kiwi", "dog", "carrot")
 
-    // 정렬: 길이 한국어.오름차순 → 길이가 같으면 사전순
+    // 정렬: 길이 backjoon.오름차순 → 길이가 같으면 사전순
     val sorted = arr.sortedWith(
         compareBy<String> { it.length }.thenBy { it }
     )

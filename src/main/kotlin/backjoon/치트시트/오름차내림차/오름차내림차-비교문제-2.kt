@@ -1,14 +1,15 @@
+package backjoon.치트시트.오름차내림차
+import backjoon.한국어.하나씩_실행
 
-import 한국어.하나씩_실행
 
-data class Student(
-    val name: String,
-    val k: Int,
-    val e: Int,
-    val m: Int
-)
 
 fun main() {
+    data class Student(
+        val name: String,
+        val k: Int,
+        val e: Int,
+        val m: Int
+    )
     val students = listOf(
         Student("홍", 90, 70, 80),
         Student("김", 90, 80, 70),

@@ -1,4 +1,4 @@
-package backjoon.math//  초6 수학
+package backjoon.치트시트.수학//  초6 수학
 
 fun main(args: Array<String>) {
     val t = readln().toInt()

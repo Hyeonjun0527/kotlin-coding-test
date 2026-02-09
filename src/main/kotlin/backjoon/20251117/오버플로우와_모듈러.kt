@@ -1,3 +1,5 @@
+package backjoon.`20251117`
+
 fun main(args: Array<String>) {
     // 1. 여기서 자르기를 호출하려면
     val (n, m) = readln().split(" ").map { it.toLong() }

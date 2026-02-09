@@ -1,4 +1,4 @@
-//BFS – BOJ 1260 DFS와 BFS (가장 대표 기초)
+package backjoon.`20251125`//BFS – BOJ 1260 DFS와 BFS (가장 대표 기초)
 
 import java.util.*  // 굳이 안 써도 되지만 일단 유지
 

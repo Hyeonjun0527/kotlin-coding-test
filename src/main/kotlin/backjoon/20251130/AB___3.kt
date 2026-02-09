@@ -1,5 +1,5 @@
 //
-//fun main(args: Array<String>) {
+//fun backjoon.main(args: Array<String>) {
 //    val n = readln().toInt()
 //    repeat(n) {
 //        val (a,b) = readln().split(" ").map {it.toInt()}

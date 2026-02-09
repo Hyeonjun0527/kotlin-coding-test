@@ -41,7 +41,7 @@ val ranks = list.mapIndexed { idx, 나 ->
 //dataclass를 사용할수도 있다.
 data class Person(val w: Int, val h: Int, val rank: Int = 0)
 
-fun main() {
+fun backjoon.main() {
     val n = readln().toInt()
 
     val list = MutableList(n) {

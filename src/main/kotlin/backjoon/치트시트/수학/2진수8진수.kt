@@ -1,4 +1,4 @@
-package backjoon.`20260206`//  2진수 8진수
+package backjoon.치트시트.수학//  2진수 8진수
 
 fun main(args: Array<String>) {
     val sb = StringBuilder()
