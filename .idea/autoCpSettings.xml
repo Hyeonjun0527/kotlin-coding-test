@@ -4,7 +4,7 @@
     <option name="defaultFileExtension" value="kt" />
     <option name="fileGenerationRoot">
       <map>
-        <entry key="Baekjoon Online Judge" value="src/main/kotlin/backjoon/sorting" />
+        <entry key="Baekjoon Online Judge" value="src/main/kotlin/backjoon/20260209" />
         <entry key="Codeforces" value="src/main/kotlin/$groupName" />
         <entry key="backjoon" value="src/main/kotlin/backjoon/20260202" />
         <entry key="백준" value="src/main/kotlin/$groupName/20260202" />
