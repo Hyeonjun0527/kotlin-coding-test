@@ -1,54 +1,36 @@
 package backjoon
 
 fun main() {
-    val t = readln().toInt()
-    val sb = StringBuilder()
+    val n = readln().toInt()
 
-    repeat(t) {
-        val (n, m) = readln().split(" ").map { it.toInt() }
+    val 입구인덱스 = HashMap<String,Int>()
+    var i = 0
+    repeat(n) {
+        val 차량번호 = readln()
+        입구인덱스[차량번호] = i
+        i++
+    }//먼저 이렇게 입구인덱스 만드는거 이제 차량번호별 있어야되는 번호가 붙은거임.
 
-        val graph = MutableList(n + 1)
-        { mutableListOf<Int>() }
-
-        repeat(m) {
-            val (x, y) = readln()
-                .split(" ").map { it.toInt() }
-            graph[x].add(y)
-            graph[y].add(x)
+    //출구에서 한 차가 나오면 추월했는지 판단해야함. 그걸 판단하려면 원래 어떻게 나와야하는지를 알아야함.
+    //추월이 없으면 입구 리스트의 “다음 차”가 출구에서도 다음으로 나와야 한다.
+    var cnt = 0
+    val 나감 = BooleanArray(n)
+    var 기대인덱스 = 0
+    repeat(n) {
+        val 나온차량번호 = readln()
+        val 나온인덱스 = 입구인덱스[나온차량번호] ?: 0
+        while (기대인덱스 < n && 나감[기대인덱스]) {
+            기대인덱스++
         }
 
-        val 색깔 = IntArray(n + 1) { 0 }
-
-        fun bfs(시작점: Int): Boolean {
-            val 큐 = ArrayDeque<Int>()
-            색깔[시작점] = 1
-            큐.addLast(시작점)
-
-            while (큐.isNotEmpty()) {
-                val cur = 큐.removeFirst()
-                for (next in graph[cur]) {
-                    if (색깔[next] == 0) {
-                        색깔[next] = -색깔[cur]
-                        큐.addLast(next)
-                    } else if (색깔[next] == 색깔[cur]) {
-                        return false
-                    }
-                }
-            }
-            return true
+        if (나온인덱스 != 기대인덱스) {
+            cnt++
         }
 
-        var possible = true
-        for (start in 1..n) {
-            if (색깔[start] != 0) continue
-            if (!bfs(start)) {
-                possible = false
-                break
-            }
-        }
-
-        if (possible) sb.append("possible\n") else sb.append("impossible\n")
+        나감[나온인덱스] = true
     }
 
-    print(sb)
+    println(cnt)
+
+
 }
