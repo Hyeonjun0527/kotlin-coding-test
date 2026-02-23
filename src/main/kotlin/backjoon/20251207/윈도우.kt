@@ -18,6 +18,7 @@ i=3 → "de"
 
 fun main() {
     val s = "helloWorld"
+
     val list = s.windowed(2)
 
     val list2 = run {
