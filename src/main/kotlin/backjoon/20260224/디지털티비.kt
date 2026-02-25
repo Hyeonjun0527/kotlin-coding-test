@@ -1,33 +1,29 @@
-package backjoon.`20260224` // 디지털 티비
+package backjoon.`20260226`
 
-import java.util.Collections.swap
-
-fun main(args: Array<String>) {
+fun main() {
     val n = readln().toInt()
-    val 채널들 = mutableListOf<String>()
-    repeat(n) { 채널들.add(readln()) }
-
-    val sb = StringBuilder()
+    val 채널들 = MutableList<String>(n) { readln() }
     var 커서 = 0
+    val sb = StringBuilder()
+    fun 이동(대상채널: String, 목표위치: Int) {
+        var 대상채널위치 = 채널들.indexOf(대상채널)
 
-    fun 올리기(목표채널: String, 목표위치: Int) {
-        var pos = 채널들.indexOf(목표채널)
-
-        while (커서 < pos) {
-            sb.append('1')
+        while (커서 < 대상채널위치) {
+            sb.append("1")
             커서++
         }
 
-        while (pos > 목표위치) {
-            sb.append('4')
-            swap(채널들, pos, pos - 1)
-            pos--
+        while (대상채널위치 > 목표위치) {
+            sb.append("4")
+            채널들[대상채널위치] = 채널들[대상채널위치 - 1]
+                .also { 채널들[대상채널위치 - 1] = 채널들[대상채널위치] }
+            대상채널위치--
             커서--
         }
     }
 
-    올리기("KBS1", 0)
-    올리기("KBS2", 1)
+    이동("KBS1", 0)
+    이동("KBS2", 1)
 
     print(sb)
 }
