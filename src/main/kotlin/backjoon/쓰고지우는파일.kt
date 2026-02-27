@@ -1,29 +1,42 @@
-package backjoon.`20260226`
+package backjoon
 
 fun main() {
-    val n = readln().toInt()
-    val 채널들 = MutableList<String>(n) { readln() }
-    var 커서 = 0
-    val sb = StringBuilder()
-    fun 이동(대상채널: String, 목표위치: Int) {
-        var 대상채널위치 = 채널들.indexOf(대상채널)
+    // 1) 프로그래머스 입력 형태와 동일
+    val lines: Array<IntArray> = arrayOf(
+        intArrayOf(0, 2),
+        intArrayOf(-3, -1),
+        intArrayOf(-2, 1)
+    )
 
-        while (커서 < 대상채널위치) {
-            sb.append("1")
-            커서++
-        }
+    // ✅ Array<T> -> MutableList<T>
+    val arrayToList: MutableList<IntArray> = lines.toMutableList()
+    println("arrayToList: ${arrayToList.map { it.joinToString(prefix = "[", postfix = "]") }}")
 
-        while (대상채널위치 > 목표위치) {
-            sb.append("4")
-            채널들[대상채널위치] = 채널들[대상채널위치 - 1]
-                .also { 채널들[대상채널위치 - 1] = 채널들[대상채널위치] }
-            대상채널위치--
-            커서--
-        }
-    }
+    // ✅ IntArray -> List<Int> / MutableList<Int>
+    val intArray0: IntArray = lines[0]
+    val list0: List<Int> = intArray0.toList()
+    val mutable0: MutableList<Int> = intArray0.toMutableList()
+    println("list0: $list0")
+    println("mutable0: $mutable0")
 
-    이동("KBS1", 0)
-    이동("KBS2", 1)
+    // ⚠️ 이건 환경에 따라 타입추론이 꼬일 수 있어서 비추
+     val bad = lines.map { it.toMutableList() }.toMutableList()
+    println("bad: $bad")
+    val origin = bad.map { it.toIntArray() }.toTypedArray()//Array<T>로 바꾼다는 의미.
 
-    print(sb)
+    // ✅ 안전 1) IntArray에서 값 2개를 직접 꺼내서 만들기 (가장 추천)
+    val 선분들1: MutableList<MutableList<Int>> =
+        lines.map { mutableListOf(it[0], it[1]) }.toMutableList()
+    println("선분들1: $선분들1")
+
+    // ✅ 안전 2) IntArray -> List -> MutableList로 단계적으로
+    val 선분들2: MutableList<MutableList<Int>> =
+        lines.map { it.toList().toMutableList() }.toMutableList()
+    println("선분들2: $선분들2")
+
+    // (추가) Array<IntArray>를 먼저 MutableList<IntArray>로 바꾼 다음,
+    // 각 IntArray를 MutableList<Int>로 바꿔도 됨
+    val 선분들3: MutableList<MutableList<Int>> =
+        lines.toMutableList().map { it.toList().toMutableList() }.toMutableList()
+    println("선분들3: $선분들3")
 }

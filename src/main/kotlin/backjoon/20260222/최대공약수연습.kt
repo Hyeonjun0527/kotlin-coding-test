@@ -13,7 +13,7 @@ fun main() {
     val b목록 = readln().split(" ").map { it.toLong() }.toMutableList()
 
     // 문제
-    // 에라토스테네스의 체
+    // 에라토스테네스의 체 - 모두 소수라고 가정하고, 소수 아닌거 지워나가기.
     val 한계 = sqrt(1_000_000_000.0).toInt() + 1
     val 소수이다 = BooleanArray(한계 + 1) { true }
     val 소수들 = mutableListOf<Int>()
@@ -25,7 +25,7 @@ fun main() {
             //소수제거
             var j = i + i
             while (j <= 한계) {
-                소수이다[i] = false
+                소수이다[j] = false
                 j += i
             }
         }
@@ -37,8 +37,8 @@ fun main() {
     // 값 = 72`는 `2 * 2 * 2 * 3 * 3
     fun 소인수누적(값0: Long, 지수맵: MutableMap<Long, Long>) {
         var 값 = 값0
-        for (소수_ in 소수들) {
-            var 소수 = 소수_.toLong()
+        for (소수0 in 소수들) {
+            var 소수 = 소수0.toLong()
             if (소수 * 소수 > 값) break
             if (값 % 소수 == 0L) {
                 var 지수 = 0

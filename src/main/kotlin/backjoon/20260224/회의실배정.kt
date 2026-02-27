@@ -9,11 +9,9 @@ fun main(args: Array<String>) {
     * */
     val n = readln().toInt()
     data class 회의(val 시작시간:Int, val 끝나는시간:Int)
-    val 회의들 = mutableListOf<회의>()
-    repeat(n) {
-        val (시작시간, 끝나는시간)
-                = readln().split(" ").map { it.toInt() }
-        회의들.add(회의(시작시간,끝나는시간))
+    val 회의들 = MutableList(n) {
+        val (시작시간,끝나는시간) = readln().split(" ").map { it.toInt() }
+        회의(시작시간,끝나는시간)
     }
     회의들.sortWith(
         compareBy<회의> { it.끝나는시간 }
