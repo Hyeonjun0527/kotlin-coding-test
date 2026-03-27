@@ -34,11 +34,11 @@ fun main() {
 
     // 2) before에서 시작점과 같은 값으로 연결된 덩어리(BFS) 찾기
     val 원래값 = 전[시작행][시작열]
-    val 방문 = Array(세로) { BooleanArray(가로) }
+    val visited = Array(세로) { BooleanArray(가로) }
 
     val 큐 = ArrayDeque<Pair<Int, Int>>()
     큐.add(시작행 to 시작열)
-    방문[시작행][시작열] = true
+    visited[시작행][시작열] = true
 
     val dr = intArrayOf(-1, 1, 0, 0)
     val dc = intArrayOf(0, 0, -1, 1)
@@ -49,9 +49,9 @@ fun main() {
             val nr = r + dr[k]
             val nc = c + dc[k]
             if (nr !in 0 until 세로 || nc !in 0 until 가로) continue
-            if (방문[nr][nc]) continue
+            if (visited[nr][nc]) continue
             if (전[nr][nc] != 원래값) continue
-            방문[nr][nc] = true
+            visited[nr][nc] = true
             큐.add(nr to nc)
         }
     }
@@ -61,7 +61,7 @@ fun main() {
 
     for (r in 0 until 세로) {
         for (c in 0 until 가로) {
-            if (방문[r][c]) {
+            if (visited[r][c]) {
                 // 덩어리 안: after 값이 전부 같아야 함
                 if (후[r][c] != 바뀐값) {
                     print("NO")

@@ -1,4 +1,4 @@
-//255 => 16으로 나눠
+package backjoon.`20260118`//255 => 16으로 나눠
 
 fun main(args: Array<String>) {
     val t = readln().toInt()

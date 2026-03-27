@@ -16,7 +16,7 @@ vertex 노드
 edge 에지
 s 시작점
 dist 노드당 최단거리배열
-visited 노드당 방문배열
+visited 노드당 visited
 pq 가중치 우선순위 큐
 adj 인접 리스트
 
